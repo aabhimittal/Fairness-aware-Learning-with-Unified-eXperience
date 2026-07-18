@@ -1,5 +1,6 @@
 site_name: FLUX — Fairness-aware Learning with Unified eXperience
 site_description: Hyperbolic embeddings, quantum-inspired attention, causal debiasing, and fair exposure re-ranking for social media feeds
+site_url: https://aabhimittal.github.io/Fairness-aware-Learning-with-Unified-eXperience/
 repo_url: https://github.com/aabhimittal/Fairness-aware-Learning-with-Unified-eXperience
 repo_name: FLUX
 

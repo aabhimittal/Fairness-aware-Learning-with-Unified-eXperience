@@ -1,6 +1,7 @@
 # 🌊 FLUX: Fairness-aware Learning with Unified eXperience
 
 [![CI](https://github.com/aabhimittal/Fairness-aware-Learning-with-Unified-eXperience/actions/workflows/ci.yml/badge.svg)](https://github.com/aabhimittal/Fairness-aware-Learning-with-Unified-eXperience/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://aabhimittal.github.io/Fairness-aware-Learning-with-Unified-eXperience/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](pyproject.toml)
 
@@ -32,9 +33,9 @@ pip install "flux-ranking[api]"          # + FastAPI serving layer
 pip install "flux-ranking[eval]"         # + everything needed to run the notebooks
 ```
 
-📚 **Full documentation**: concepts, quickstart, evaluation, serving, and
-release guides live in [`docs/`](docs/index.md) (MkDocs site, auto-deployed
-to GitHub Pages from `main`).
+📚 **Full documentation**: **[aabhimittal.github.io/Fairness-aware-Learning-with-Unified-eXperience](https://aabhimittal.github.io/Fairness-aware-Learning-with-Unified-eXperience/)**
+— concepts, quickstart, evaluation, serving, and release guides
+(sources in [`docs/`](docs/index.md), auto-deployed on every push to `main`).
 
 From source:
 
