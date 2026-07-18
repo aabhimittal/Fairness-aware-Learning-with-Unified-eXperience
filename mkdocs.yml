@@ -1,0 +1,35 @@
+site_name: FLUX — Fairness-aware Learning with Unified eXperience
+site_description: Hyperbolic embeddings, quantum-inspired attention, causal debiasing, and fair exposure re-ranking for social media feeds
+repo_url: https://github.com/aabhimittal/Fairness-aware-Learning-with-Unified-eXperience
+repo_name: FLUX
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - scheme: slate
+      primary: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+  features:
+    - navigation.sections
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Concepts: concepts.md
+  - Quickstart: quickstart.md
+  - Evaluation: evaluation.md
+  - Serving API: serving.md
+  - Releasing: releasing.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - tables

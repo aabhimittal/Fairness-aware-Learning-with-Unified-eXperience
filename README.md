@@ -28,8 +28,13 @@ destructively, something a plain softmax can't express.
 ```bash
 pip install flux-ranking                 # NumPy core
 pip install "flux-ranking[torch]"        # + PyTorch training backend
+pip install "flux-ranking[api]"          # + FastAPI serving layer
 pip install "flux-ranking[eval]"         # + everything needed to run the notebooks
 ```
+
+📚 **Full documentation**: concepts, quickstart, evaluation, serving, and
+release guides live in [`docs/`](docs/index.md) (MkDocs site, auto-deployed
+to GitHub Pages from `main`).
 
 From source:
 

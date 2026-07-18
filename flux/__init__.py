@@ -12,13 +12,15 @@ from .attention import QuantumAttention
 from .causal import IPSDebiaser
 from .fairness import FairReranker
 from .engine import FluxEngine, Content
-from .datasets import MovieLens, load_ml100k, parse_ml100k
+from .datasets import MovieLens, load_ml100k, load_ml1m, parse_ml100k, parse_ml1m
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 __all__ = [
     "MovieLens",
     "load_ml100k",
+    "load_ml1m",
     "parse_ml100k",
+    "parse_ml1m",
     "PoincareBall",
     "HyperbolicEmbedding",
     "QuantumAttention",

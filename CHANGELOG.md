@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.3.0 (2026-07-18)
+
+- Evaluation pipeline moved into the package (`flux.evaluation`) with a
+  `flux-eval` CLI — notebooks are now demos only, nothing requires them
+- MovieLens 1M support (`load_ml1m`, sparse-id re-indexing, named genres)
+- FastAPI serving layer (`flux.serving.create_app`) with `[api]` extra and
+  a runnable example (`examples/serve_api.py`)
+- MkDocs documentation site (`docs/`, mkdocs-material) with auto-deploy to
+  GitHub Pages on pushes to main
+- Tag-triggered PyPI release workflow using trusted publishing (OIDC) —
+  see docs/releasing.md for the one-time PyPI setup
+
 ## 0.2.0 (2026-07-18)
 
 - MovieLens 100K loader (`flux.datasets`): cached download, offline-testable
