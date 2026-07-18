@@ -86,10 +86,17 @@ class TestIPSDebiaser(unittest.TestCase):
         est = deb.debias(np.array([1.0]), np.array([10]))
         self.assertLessEqual(est[0], 3.0)
 
-    def test_ctr_estimate_in_unit_interval(self):
-        deb = IPSDebiaser()
-        ctr = deb.estimate_ctr(np.array([1, 0, 1, 0]), np.array([0, 1, 2, 3]))
-        self.assertTrue(0.0 <= ctr <= 1.0)
+    def test_ctr_estimate_recovers_truth_under_position_bias(self):
+        # simulate: examine rank k w.p. decay^k, click examined items w.p. 0.4
+        rng = np.random.default_rng(0)
+        deb = IPSDebiaser(position_decay=0.7)
+        ranks = rng.integers(0, 8, 20000)
+        examined = rng.random(20000) < deb.propensity(ranks)
+        clicks = examined & (rng.random(20000) < 0.4)
+        naive = clicks.mean()
+        ips = deb.estimate_ctr(clicks.astype(float), ranks)
+        self.assertLess(abs(ips - 0.4), 0.05)
+        self.assertGreater(abs(naive - 0.4), 0.1)  # naive is badly biased
 
 
 class TestFairReranker(unittest.TestCase):

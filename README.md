@@ -56,6 +56,24 @@ python examples/demo.py          # end-to-end demo, two contexts + fairness repo
 python -m unittest discover tests -v
 ```
 
+### PyTorch training backend (optional)
+
+```bash
+pip install -r requirements-torch.txt
+```
+
+`flux/torch_backend/` provides a differentiable Poincaré manifold
+(autograd replaces the core's finite-difference gradients), a
+`HyperbolicInterestModel` that embeds users and content on the ball via
+tangent-space parametrization (so plain Adam works), a `EuclideanBaseline`
+for comparisons, and a `train()` loop with `TrainConfig` +
+`make_synthetic_interactions()` for hierarchical synthetic data.
+
+See **[notebooks/evaluation.ipynb](notebooks/evaluation.ipynb)** for a full
+executed evaluation: NDCG@10 / Hit@10 vs the Euclidean baseline, exposure
+fairness before/after `FairReranker`, and IPS vs naive CTR under simulated
+position bias.
+
 ```python
 import numpy as np
 from flux import FluxEngine, Content
