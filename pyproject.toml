@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "flux-ranking"
-version = "0.2.0"
+version = "0.3.0"
 description = "FLUX: Fairness-aware Learning with Unified eXperience — hyperbolic embeddings, quantum-inspired attention, causal debiasing, and fair exposure re-ranking for social media feeds"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -28,8 +28,13 @@ dependencies = ["numpy>=1.24"]
 
 [project.optional-dependencies]
 torch = ["torch>=2.0"]
+api = ["fastapi>=0.110", "uvicorn>=0.29"]
 eval = ["torch>=2.0", "matplotlib>=3.7", "nbformat>=5.9", "nbclient>=0.9", "ipykernel>=6.25"]
-dev = ["build>=1.0", "twine>=4.0"]
+docs = ["mkdocs>=1.5", "mkdocs-material>=9.5"]
+dev = ["build>=1.0", "twine>=4.0", "fastapi>=0.110", "httpx>=0.27"]
+
+[project.scripts]
+flux-eval = "flux.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/aabhimittal/Fairness-aware-Learning-with-Unified-eXperience"
