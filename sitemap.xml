@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://aabhimittal.github.io/Fairness-aware-Learning-with-Unified-eXperience/</loc>
+         <lastmod>2026-07-18</lastmod>
+    </url>
+    <url>
+         <loc>https://aabhimittal.github.io/Fairness-aware-Learning-with-Unified-eXperience/concepts/</loc>
+         <lastmod>2026-07-18</lastmod>
+    </url>
+    <url>
+         <loc>https://aabhimittal.github.io/Fairness-aware-Learning-with-Unified-eXperience/evaluation/</loc>
+         <lastmod>2026-07-18</lastmod>
+    </url>
+    <url>
+         <loc>https://aabhimittal.github.io/Fairness-aware-Learning-with-Unified-eXperience/quickstart/</loc>
+         <lastmod>2026-07-18</lastmod>
+    </url>
+    <url>
+         <loc>https://aabhimittal.github.io/Fairness-aware-Learning-with-Unified-eXperience/releasing/</loc>
+         <lastmod>2026-07-18</lastmod>
+    </url>
+    <url>
+         <loc>https://aabhimittal.github.io/Fairness-aware-Learning-with-Unified-eXperience/serving/</loc>
+         <lastmod>2026-07-18</lastmod>
+    </url>
+</urlset>
