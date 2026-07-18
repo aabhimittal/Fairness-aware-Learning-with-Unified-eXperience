@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flux-ranking"
+version = "0.2.0"
+description = "FLUX: Fairness-aware Learning with Unified eXperience — hyperbolic embeddings, quantum-inspired attention, causal debiasing, and fair exposure re-ranking for social media feeds"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "Abhi Mittal" }]
+keywords = [
+    "recommender-systems", "fairness", "hyperbolic-embeddings",
+    "causal-inference", "ranking", "social-media",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+torch = ["torch>=2.0"]
+eval = ["torch>=2.0", "matplotlib>=3.7", "nbformat>=5.9", "nbclient>=0.9", "ipykernel>=6.25"]
+dev = ["build>=1.0", "twine>=4.0"]
+
+[project.urls]
+Homepage = "https://github.com/aabhimittal/Fairness-aware-Learning-with-Unified-eXperience"
+Repository = "https://github.com/aabhimittal/Fairness-aware-Learning-with-Unified-eXperience"
+Issues = "https://github.com/aabhimittal/Fairness-aware-Learning-with-Unified-eXperience/issues"
+
+[tool.setuptools.packages.find]
+include = ["flux*"]
