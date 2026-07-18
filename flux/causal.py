@@ -33,7 +33,11 @@ class IPSDebiaser:
         return clicks * weights
 
     def estimate_ctr(self, clicks: np.ndarray, ranks: np.ndarray) -> float:
-        """Self-normalized IPS estimate of the true click-through rate."""
+        """IPS mean estimate of the true click-through rate.
+
+        (1/n) * sum(click_i / propensity_i): unbiased for the CTR users would
+        show if every item were examined, up to the variance-reducing clip.
+        """
         clicks = np.asarray(clicks, dtype=float)
         w = np.minimum(1.0 / self.propensity(ranks), self.clip)
-        return float(np.sum(clicks * w) / np.sum(w))
+        return float(np.mean(clicks * w))
